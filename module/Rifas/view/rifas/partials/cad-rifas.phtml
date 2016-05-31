@@ -1,0 +1,118 @@
+<!-- CONTENT -->
+<div id="cadRifas">
+    <!-- registration form -->
+    <?php $formCadRifas = $this->formCadRifas; ?>
+    <?php $formCadRifas->prepare(); ?>
+
+    <?php echo $this->form()->openTag($formCadRifas); ?>
+
+    <legend id="tituloRifas"></legend>
+
+    <?php echo $this->formElement($formCadRifas->get('idRifa')); ?>
+    <?php echo $this->formElement($formCadRifas->get('idUsuarioRifas')); ?>
+    <?php echo $this->formElement($formCadRifas->get('stPdf')); ?>
+
+    <div class="row">
+
+        <div class="form-group col-md-6">
+            <label class="control-label" for="idUsuarioSelectRifas">Usuário:</label>
+            <?php echo $this->formElement($formCadRifas->get('idUsuarioSelectRifas')); ?>
+        </div>
+
+        <div class="form-group col-md-2">
+            <label class="control-label" for="nuInicio">Rifas de*:</label>
+            <?php echo $this->formElement($formCadRifas->get('nuInicio')); ?>
+        </div>
+
+        <div class="form-group col-md-2">
+            <label class="control-label" for="nuFinal">até*:</label>
+            <?php echo $this->formElement($formCadRifas->get('nuFinal')); ?>
+        </div>
+
+        <div class="form-group col-md-2">
+            <label class="control-label" for="qtPremio">Qtde. Prêmios:</label>
+            <?php echo $this->formElement($formCadRifas->get('qtPremio')); ?>
+        </div>
+
+    </div>
+
+    <div class="row">
+
+        <div class="form-group col-md-6">
+            <label class="control-label" for="vlRifa">Valor da Rifa*:</label>
+            <?php echo $this->formElement($formCadRifas->get('vlRifa')); ?>
+        </div>
+
+        <div class="form-group col-md-6">
+            <label class="control-label" for="dtSorteio">Data Sorteio*:</label>
+            <div class="input-group">
+                <?php echo $this->formElement($formCadRifas->get('dtSorteio')); ?>
+                <span class="input-group-addon">
+                    <span class="glyphicon glyphicon-calendar"></span>
+                </span>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="row">
+
+        <div class="form-group col-md-4">
+            <label class="control-label" for="dsInstituicao">Instituição:</label>
+            <?php echo $this->formElement($formCadRifas->get('dsInstituicao')); ?>
+        </div>        
+
+        <div class="form-group col-md-4">
+            <label class="control-label" for="dsPremio">Prêmios:</label>
+            <?php echo $this->formElement($formCadRifas->get('dsPremio')); ?>
+        </div>        
+
+        <div class="form-group col-md-4">
+            <label class="control-label" for="dsObservacao">Observação:</label>
+            <?php echo $this->formElement($formCadRifas->get('dsObservacao')); ?>
+        </div>        
+
+    </div>
+
+    <div id="divSorteio">
+
+        <legend>Sorteio das Rifas</legend>
+
+        <?php echo $this->formElement($formCadRifas->get('idPremiado')); ?>
+        <?php echo $this->formElement($formCadRifas->get('nuRifa')); ?>
+        <?php echo $this->formElement($formCadRifas->get('nuPremio')); ?>
+        <div class="row">
+            <div id="divPremiacao" class="col-md-12"></div>
+        </div>
+    
+    </div>
+
+    <div class="row">
+
+        <div class="col-md-12">
+            <?php echo $this->formButton()->openTag($formCadRifas->get('btnNovoCadRifas')); ?>
+            <?php echo '<i class="glyphicon glyphicon-plus"></i> ' . $formCadRifas->get('btnNovoCadRifas')->getLabel(); ?>
+            <?php echo $this->formButton()->closeTag(); ?>
+
+            <?php echo $this->formButton()->openTag($formCadRifas->get('btnGravarRifas')); ?>
+            <?php echo '<i class="glyphicon glyphicon-floppy-disk"></i> ' . $formCadRifas->get('btnGravarRifas')->getLabel(); ?>
+            <?php echo $this->formButton()->closeTag(); ?>
+
+            <?php echo $this->formButton()->openTag($formCadRifas->get('btnGerarPdfRifasTeste')); ?>
+            <?php echo '<i class="glyphicon glyphicon-print"></i> ' . $formCadRifas->get('btnGerarPdfRifasTeste')->getLabel(); ?>
+            <?php echo $this->formButton()->closeTag(); ?>
+
+            <?php echo $this->formButton()->openTag($formCadRifas->get('btnGerarPdfRifas')); ?>
+            <?php echo '<i class="glyphicon glyphicon-print"></i> ' . $formCadRifas->get('btnGerarPdfRifas')->getLabel(); ?>
+            <?php echo $this->formButton()->closeTag(); ?>
+
+            <?php echo $this->formButton()->openTag($formCadRifas->get('btnVoltarCadRifas')); ?>
+            <?php echo '<i class="glyphicon glyphicon-arrow-left"></i> ' . $formCadRifas->get('btnVoltarCadRifas')->getLabel(); ?>
+            <?php echo $this->formButton()->closeTag(); ?>
+        </div>
+
+    </div>
+
+    <?php echo $this->form()->closeTag($formCadRifas); ?>
+
+</div>

@@ -1,0 +1,85 @@
+<!-- CONTENT -->
+<div id="psqRifas">
+
+    <?php $formPsqRifas = $this->formPsqRifas; ?>
+    <?php $formPsqRifas->prepare(); ?>
+
+    <?php echo $this->form()->openTag($formPsqRifas); ?>
+
+    <legend id="tituloRifasPsq"></legend>
+    
+    <?php echo $this->formElement($formPsqRifas->get('idUsuarioPsqRifas')); ?>
+
+    <div class="row">
+        
+        <div class="form-group col-md-6">
+            <label class="control-label" for="idUsuarioSelectPsqRifas">Usuário:</label>
+            <?php echo $this->formElement($formPsqRifas->get('idUsuarioSelectPsqRifas')); ?>
+        </div>
+        
+        <div class="form-group col-md-6">
+          <label class="control-label" for="appendedtext">Instituição:</label>
+            <div class="input-group">
+                <?php echo $this->formElement($formPsqRifas->get('dsInstituicaoPsq')); ?>
+                <span class="input-group-addon">
+                    <span class="glyphicon glyphicon-pencil"></span>
+                </span>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="row">
+
+        <div class="form-group col-md-12">
+          <label class="control-label" for="appendedtext">Prêmio:</label>
+            <div class="input-group">
+                <?php echo $this->formElement($formPsqRifas->get('dsPremioPsq')); ?>
+                <span class="input-group-addon">
+                    <span class="glyphicon glyphicon-pencil"></span>
+                </span>
+            </div>
+        </div>
+        
+    </div>
+
+    <div class="row">
+
+        <div class="form-group col-md-6">
+          <label class="control-label" for="appendedtext">Sorteio de:</label>
+            <div class="input-group">
+                <?php echo $this->formElement($formPsqRifas->get('dtInicioPsq')); ?>
+                <span class="input-group-addon">
+                    <span class="glyphicon glyphicon-calendar"></span>
+                </span>
+            </div>
+        </div>
+        
+        <div class="form-group col-md-6">
+          <label class="control-label" for="appendedtext">até:</label>
+            <div class="input-group">
+                <?php echo $this->formElement($formPsqRifas->get('dtFinalPsq')); ?>
+                <span class="input-group-addon">
+                    <span class="glyphicon glyphicon-calendar"></span>
+                </span>
+            </div>
+        </div>
+        
+    </div>
+
+    <div class="row">
+        <div class="form-group col-md-12">
+        <?php echo $this->formButton()->openTag($formPsqRifas->get('btnPesquisarRifas')); ?>
+        <?php echo '<i class="glyphicon glyphicon-search"></i> ' . $formPsqRifas->get('btnPesquisarRifas')->getLabel(); ?>
+        <?php echo $this->formButton()->closeTag(); ?>
+
+        <?php echo $this->formButton()->openTag($formPsqRifas->get('btnNovoRifas')); ?>
+        <?php echo '<i class="glyphicon glyphicon-plus"></i> ' . $formPsqRifas->get('btnNovoRifas')->getLabel(); ?>
+        <?php echo $this->formButton()->closeTag(); ?>
+    </div>
+    </div>
+    <!-- end cut -->
+    <?php echo $this->form()->closeTag(); ?>
+
+    <div id="tableRifas"></div>
+</div>

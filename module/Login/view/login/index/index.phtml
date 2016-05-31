@@ -1,0 +1,61 @@
+<script type="text/javascript" src="<?php echo $this->basePath() . '/js/login/login.js'; ?>"></script>  
+<ol class="breadcrumb">
+    Você está em: &nbsp
+    <li>SGR</li>
+    <li>Login</li>
+    <li class="active">Área Restrita</li>
+</ol>
+
+<!-- login form -->
+<?php if ($this->dados['tipoMsg'] != "") : ?>
+<script>
+    setTimeout(exibirMsgError, 500);
+function exibirMsgError() {
+    exibirFlashMensage('<?php echo $this->dados['tipoMsg']; ?>', '<?php echo $this->dados['textoMsg']; ?>');
+}
+</script>
+<?php endif; ?>
+
+<?php $form = $this->formLogin; ?>
+<?php $form->prepare(); ?>
+<?php echo $this->form()->openTag($form); ?> 
+
+<legend>Login - Área Restrita</legend>
+
+<div id="alerts" class="alert alert-success">
+    <span id="dsAlertsMsg"></span>
+</div>
+
+<div class="row">
+    <div class="col-md-3"></div>
+    <div class="form-group col-md-6">
+        <div class="input-group">
+            <?php echo $this->formElement($form->get('login')); ?>
+            <span class="input-group-addon">
+                <span class="glyphicon glyphicon-user"></span>
+            </span>
+        </div>
+    </div>
+    <div class="col-md-3"></div>
+</div>
+<div class="row">
+    <div class="col-md-3"></div>
+    <div class="form-group col-md-6">
+        <div class="input-group">
+            <?php echo $this->formElement($form->get('senha')); ?>
+            <span class="input-group-addon">
+                <span class="glyphicon glyphicon-lock"></span>
+            </span>
+        </div>
+    </div>
+    <div class="col-md-3"></div>
+</div>
+<div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-6">
+        <?php echo $this->formElement($form->get('btnEntrar')); ?>
+    </div>
+    <div class="col-md-3"></div>
+</div>
+
+<?php echo $this->form()->closeTag($form); ?>

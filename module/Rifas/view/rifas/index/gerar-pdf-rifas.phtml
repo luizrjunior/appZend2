@@ -1,0 +1,63 @@
+<?php $count = 0; ?>
+<?php for ($i=$this->dados['nuInicio'];$i<$this->dados['nuFinal']+1;$i++) : ?>
+    <?php $nuRifa = $this->masterHelper()->acrescentarZeros($i,4); ?>
+    <?php $count++; ?>
+
+    <table cellpadding="0" cellspacing="0" border="1" width="100%">
+        <tr>
+            <td style="text-align:center;" width="30%">
+                #<?php echo $nuRifa; ?>
+            </td>
+            <td style="text-align:center;" width="60%">
+                <?php echo $this->dados['dsInstituicao']; ?>
+            </td>
+            <td style="text-align:center;">
+                #<?php echo $nuRifa; ?>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <table cellpadding="0" cellspacing="0" border="0" width="100%">
+                    <tr>
+                        <td style="border-bottom-width: 1px">
+                            Nome:<br />&nbsp;
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="border-bottom-width: 1px">
+                            Telefone:<br />&nbsp;
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Endereço:<br />&nbsp;
+                        </td>
+                    </tr>
+                </table>
+            </td>
+            <td colspan="2" style="text-align:center;">
+                Sorteia-se no dia <?php echo $this->dados['dtSorteio']; ?> de acordo com o número deste bilhete: <br />
+                <?php echo $this->dados['dsPremio']; ?>
+            </td>
+        </tr>
+        <tr>
+            <td style="text-align:center;" width="30%">
+                #<?php echo $nuRifa; ?>
+            </td>
+            <td width="60%">
+                Obs.: <?php echo $this->dados['dsObservacao']; ?>
+            </td>
+            <td style="text-align:center;">
+                Valor<br /><?php echo $this->dados['vlRifa']; ?>
+            </td>
+        </tr>
+    </table>
+
+    <br />
+    
+    <?php if ($count == 5) : ?>
+        <br />
+        <?php $count = 0; ?>
+    <?php endif; ?>
+    
+<?php endfor; ?>

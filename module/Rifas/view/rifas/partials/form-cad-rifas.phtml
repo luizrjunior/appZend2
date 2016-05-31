@@ -1,0 +1,8 @@
+<script>
+    top.idUsuarioPerfil = '<?php echo $this->identity()->getIdUsuario(); ?>';
+    top.tpUsuarioPerfil = '<?php echo $this->identity()->getTpUsuario(); ?>';
+</script>
+<script type="text/javascript" src="<?php echo $this->basePath() . '/js/rifas/rifas.js'; ?>"></script>
+
+<?php echo $this->partial('cad-rifas'); ?>
+<?php echo $this->partial('psq-rifas'); ?>
