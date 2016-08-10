@@ -15,9 +15,9 @@ return array(
     //Zend_DB
     'db' => array(
         'driver' => 'Pdo',
-        'dsn' => 'mysql:dbname=rifas;host=127.0.0.1',
-        'username' => 'root',
-        'password' => '',
+        'dsn' => 'mysql:dbname=u131945273_luizr;host=mysql.hostinger.com.br',
+        'username' => 'u131945273_luizr',
+        'password' => 'luizr2016',
         'driver_options' => array(
            // PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES \'UTF8\''
         ),

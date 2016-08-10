@@ -6,12 +6,11 @@ return array(
             'orm_default' => array(
                 'driverClass' => 'Doctrine\DBAL\Driver\PDOMySql\Driver',
                 'params' => array(
-//                    'host' => 'mysql.lefdevelopers.com.br',
-                    'host' => 'mysql05-farm13.kinghost.net',
+                    'host' => 'mysql.hostinger.com.br',
                     'port' => '3306',
-                    'user' => 'lefdevelopers',
-                    'password' => 'lef2014mysql',
-                    'dbname' => 'lefdevelopers',
+                    'user' => 'u131945273_luizr',
+                    'password' => 'luizr2016',
+                    'dbname' => 'u131945273_luizr',
                 )
             ),
         ),

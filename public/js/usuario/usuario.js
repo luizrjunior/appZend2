@@ -55,41 +55,41 @@ function validarCamposUsuario() {
     var texto = "<ul>";
     
     if ($("#login").val() === "") {
-        texto += "<li><font color='#000000'>O campo <strong>\"Login\"</strong> é de preechimento obrigatório.</font></li>";
+        texto += "<li>O campo <strong>\"Login\"</strong> é de preechimento obrigatório.</li>";
         chk = false;
     }
 
     if ($("#email").val() === "") {
-        texto += "<li><font color='#000000'>O campo <strong>\"Email\"</strong> é de preechimento obrigatório.</font></li>";
+        texto += "<li>O campo <strong>\"Email\"</strong> é de preechimento obrigatório.</li>";
         chk = false;
     }
 
     if ($("#idUsuario").val() === "") {
         if ($("#senha").val() === "") {
-            texto += "<li><font color='#000000'>O campo <strong>\"Senha\"</strong> é de preechimento obrigatório.</font></li>";
+            texto += "<li>O campo <strong>\"Senha\"</strong> é de preechimento obrigatório.</li>";
             chk = false;
         }
 
         if ($("#confirmarsenha").val() === "") {
-            texto += "<li><font color='#000000'>O campo <strong>\"Confirmar Senha\"</strong> é de preechimento obrigatório.</font></li>";
+            texto += "<li>O campo <strong>\"Confirmar Senha\"</strong> é de preechimento obrigatório.</li>";
             chk = false;
         }
 
         if ($("#senha").val() !== "" && $("#confirmarsenha").val() !== "") {
             if ($("#senha").val() !== $("#confirmarsenha").val()) {
-                texto += "<li><font color='#000000'>O campo <strong>\"Confirmar Senha\"</strong> diferente do campo <strong>\"Senha\"</strong>.</font></li>";
+                texto += "<li>O campo <strong>\"Confirmar Senha\"</strong> diferente do campo <strong>\"Senha\"</strong>.</li>";
                 chk = false;
             }
         }
     }
 
     if ($("#tpUsuario").val() === "T") {
-        texto += "<li><font color='#000000'>O campo <strong>\"Função\"</strong> é de seleção obrigatória.</font></li>";
+        texto += "<li>O campo <strong>\"Função\"</strong> é de seleção obrigatória.</li>";
         chk = false;
     }
 
     if ($("#stUsuario").val() === "T") {
-        texto += "<li><font color='#000000'>O campo <strong>\"Status\"</strong> é de seleção obrigatória.</font></li>";
+        texto += "<li>O campo <strong>\"Status\"</strong> é de seleção obrigatória.</li>";
         chk = false;
     }
     texto += "</ul>";
